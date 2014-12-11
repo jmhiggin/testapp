@@ -12,67 +12,13 @@
             "properties": {
                 "element": {"#": "main"}
             }
-        },
-        "actionEventListener2": {
-            "prototype": "montage/core/event/action-event-listener",
-            "properties": {
-                "action": "addContent",
-                "handler": {"@": "myRangeControl"}
-            },
-            "_dev": {
-                "isHidden": true
-            }
-        },
-        "list": {
-            "prototype": "digit/ui/list.reel",
-            "properties": {
-                "element": {"#": "list"},
-                "content": [],
-                "contentController": {"@": "myRangeControl"},
-                "isSelectionEnabled": false
-            }
-        },
-        "myRangeControl": {
-            "prototype": "montage/core/range-controller",
-            "properties": {
-                "content": [
-                    ""
-                ],
-                "reversed": false
-            }
-        },
-        "New Task": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "New Task"},
-                "enabled": true,
-                "label": "New Task"
-            },
-            "listeners": [
-                {
-                    "type": "action",
-                    "useCapture": true,
-                    "listener": {"@": "actionEventListener2"}
-                }
-            ]
-        },
-        "title": {
-            "prototype": "digit/ui/title.reel",
-            "properties": {
-                "element": {"#": "title"},
-                "value": "My App"
-            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <h1 data-montage-id="title"></h1>
-        <button data-montage-id="New Task"></button>
-        <ul data-montage-id="list">
-            <li></li>
-        </ul>
+
     </div>
 </body>
 </html>
