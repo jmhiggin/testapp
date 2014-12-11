@@ -13,7 +13,7 @@
                 "element": {"#": "main"}
             }
         },
-        "actionEventListener": {
+        "actionEventListener2": {
             "prototype": "montage/core/event/action-event-listener",
             "properties": {
                 "action": "addContent",
@@ -27,24 +27,32 @@
             "prototype": "digit/ui/list.reel",
             "properties": {
                 "element": {"#": "list"},
-                "contentController": {"@": "myRangeControl"}
+                "content": [],
+                "contentController": {"@": "myRangeControl"},
+                "isSelectionEnabled": false
             }
         },
         "myRangeControl": {
-            "prototype": "montage/core/range-controller"
+            "prototype": "montage/core/range-controller",
+            "properties": {
+                "content": [
+                    ""
+                ],
+                "reversed": false
+            }
         },
         "New Task": {
             "prototype": "digit/ui/button.reel",
             "properties": {
                 "element": {"#": "New Task"},
                 "enabled": true,
-                "label": "Button"
+                "label": "New Task"
             },
             "listeners": [
                 {
                     "type": "action",
                     "useCapture": true,
-                    "listener": {"@": "actionEventListener"}
+                    "listener": {"@": "actionEventListener2"}
                 }
             ]
         },
